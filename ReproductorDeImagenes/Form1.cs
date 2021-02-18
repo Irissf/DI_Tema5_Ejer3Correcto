@@ -29,7 +29,6 @@ namespace ReproductorDeImagenes
                 //si estaba en pause 
                 timer1.Enabled = false;
                 reproductor.PausePlay = false;
-                menuStrip1.Enabled = true;
 
             }
             else
@@ -37,7 +36,6 @@ namespace ReproductorDeImagenes
                 //si estaba en play
                 timer1.Enabled = true;
                 reproductor.PausePlay = true;
-                menuStrip1.Enabled = false;
             }
         }
 
@@ -56,6 +54,9 @@ namespace ReproductorDeImagenes
 
         private void cargarGaleriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = false;
+            reproductor.PausePlay = false;
+
             imagenesDelFichero.Clear();
             num = 0;
 
