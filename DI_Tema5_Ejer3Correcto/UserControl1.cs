@@ -114,11 +114,11 @@ namespace DI_Tema5_Ejer3Correcto
         [Description("cambia entre play y pause")]
         public event System.EventHandler ClickEnPuse;
 
-        protected override void OnClick(EventArgs e)
-        {
-            ClickEnPuse?.Invoke(this,EventArgs.Empty);
-            base.OnClick(e);
-        }
+        //protected override void OnClick(EventArgs e) //esto es el del componente, no el del boton de dentro del componente
+        //{
+        //    ClickEnPuse?.Invoke(this,EventArgs.Empty);
+        //    base.OnClick(e);
+        //}
 
         [Category("Desborda tiempo")]
         [Description("Cuando YY es mayor de 59")]
@@ -129,9 +129,10 @@ namespace DI_Tema5_Ejer3Correcto
             label1.Text = string.Format("{0:00}:{1:00}", xx,yy);
         }
 
-        private void click(object sender, EventArgs e)
+        private void click(object sender, EventArgs e) // este es el correcto
         {
-            this.OnClick(e);
+            ClickEnPuse?.Invoke(this, EventArgs.Empty);
+            base.OnClick(e);
         }
     }
 
