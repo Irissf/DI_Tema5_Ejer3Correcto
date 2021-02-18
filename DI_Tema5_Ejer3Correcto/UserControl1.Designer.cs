@@ -35,17 +35,20 @@ namespace DI_Tema5_Ejer3Correcto
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 63);
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(41, 38);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 68);
+            this.label1.Location = new System.Drawing.Point(47, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
@@ -58,6 +61,7 @@ namespace DI_Tema5_Ejer3Correcto
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "UserControl1";
+            this.Size = new System.Drawing.Size(104, 55);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI_Tema5_Ejer3Correcto", "DI_Tema5_Ejer3Correcto\DI_Tema5_Ejer3Correcto.csproj", "{F1609D38-9C1F-4583-B662-A54E7932ACB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReproductorDeImagenes", "ReproductorDeImagenes\ReproductorDeImagenes.csproj", "{DEFC8C1C-5A59-4F0F-BEF0-B9A63120A91C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F1609D38-9C1F-4583-B662-A54E7932ACB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1609D38-9C1F-4583-B662-A54E7932ACB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1609D38-9C1F-4583-B662-A54E7932ACB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFC8C1C-5A59-4F0F-BEF0-B9A63120A91C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFC8C1C-5A59-4F0F-BEF0-B9A63120A91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFC8C1C-5A59-4F0F-BEF0-B9A63120A91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFC8C1C-5A59-4F0F-BEF0-B9A63120A91C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

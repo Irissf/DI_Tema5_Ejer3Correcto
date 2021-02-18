@@ -24,6 +24,9 @@ namespace DI_Tema5_Ejer3Correcto
             |    |__/ |___ |__| |__/    |__] |__/ |  | |__] | |___ |  \ |__| |  \ |___ [__  
             |___ |  \ |___ |  | |  \    |    |  \ |__| |    | |___ |__/ |  | |__/ |___ ___]
          * =============================================================================
+         * 
+         * https://www.flaticon.es/icono-gratis/punta-de-flecha-del-boton-de-reproduccion_27223
+         * https://www.flaticon.es/icono-gratis/pausa_151859?term=pause&page=1&position=2&page=1&position=2&related_id=151859&origin=search
         */
 
         //PausePlay**************************************
@@ -35,6 +38,7 @@ namespace DI_Tema5_Ejer3Correcto
             set
             {
                 pausePlay = value;
+                button1.Image = value ? Properties.Resources.pause : Properties.Resources.play;
             }
             get
             {
@@ -59,7 +63,7 @@ namespace DI_Tema5_Ejer3Correcto
                 {
                     xx = value;
                 }
-                Refresh();
+                Recolocar();
 
             }
             get
@@ -90,43 +94,12 @@ namespace DI_Tema5_Ejer3Correcto
                 {
                     yy = value;
                 }
-                this.Refresh();
+                Recolocar();
             }
             get
             {
                 return yy;
             }
-        }
-
-        /**
-     * =============================================================================
-        ___  ____ ____ ___  _ ____ ___  ____ ___  ____ ____    ___  _  _ ___  _    _ ____ ____ ____ 
-        |__] |__/ |  | |__] | |___ |  \ |__| |  \ |___ [__     |__] |  | |__] |    | |    |__| [__  
-        |    |  \ |__| |    | |___ |__/ |  | |__/ |___ ___]    |    |__| |__] |___ | |___ |  | ___]
-     * =============================================================================
-    */
-
-
-        //Propiedades públicas que dan acceso a las propiedades que por defecto estan privadas
-        //pero que queremos que puedan acceder a ellas por ejemplo la propiedad Text
-        //De quererlo, tendríamos que hacer lo mismo para color, font, size etc.
-        [Category("Appearance")]
-        [Description("Texto asociado a la label del control")]
-        public string TextLbl
-        {
-            set
-            {
-                label1.Text = value;
-            }
-            get
-            {
-                return label1.Text;
-            }
-        }
-
-        private void EscribirLabel()
-        {
-            label1.Text = String.Format("{0:00}:{1:00}", xx, yy);
         }
 
 
@@ -151,5 +124,16 @@ namespace DI_Tema5_Ejer3Correcto
         [Description("Cuando YY es mayor de 59")]
         public event System.EventHandler DesbordaTiempo;
 
+        private void Recolocar()
+        {
+            label1.Text = string.Format("{0:00}:{1:00}", xx,yy);
+        }
+
+        private void click(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
     }
+
+
 }
